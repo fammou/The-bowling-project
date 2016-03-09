@@ -2,7 +2,6 @@
  * Created by QYL on 2016/3/9.
  * la creation de la class Score pour calculer les points #3
  */
-
 public class Score {
     private int[] itsThrows = new int[31];//tableau des Scores
     private int ball;//le numero du lance
