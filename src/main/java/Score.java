@@ -2,7 +2,7 @@
  * Created by QYL on 2016/3/9.
  * la creation de la class Score pour calculer les points #3
  */
-public class Score {
+public class Score implements IScore{
     private int[] itsThrows = new int[31];//tableau des Scores
     private int ball;//le numero du lance
     private int itsCurrentThrow =  0;//le numero du lance en current
@@ -12,6 +12,7 @@ public class Score {
      * itsThrows[le numero du lance]=score
      * @param pins:score
      */
+    @Override
     public void addThrow(int pins){
         itsThrows[itsCurrentThrow++]=pins;
     }
@@ -19,14 +20,16 @@ public class Score {
     * strike
     * une methode strike #8
     * */
-    private boolean strike(){
+    @Override
+    public boolean strike(){
         return itsThrows[ball] == 10;
     }
 
     /*
     * deux lances apres strike #8
     * */
-    private int nextTwoBallsForStrike(){
+    @Override
+    public int nextTwoBallsForStrike(){
         int a=++ball;
         int b=++ball;
         return itsThrows[a]+itsThrows[b];
@@ -35,13 +38,15 @@ public class Score {
     * spare
     * une methode spare #7
     * */
-    private boolean spare(){
+    @Override
+    public boolean spare(){
         return (itsThrows[ball] + itsThrows[ball + 1]) == 10;
     }
     /*
     * un lances apres spare #7
     * */
-    private int nextBallForSpare(){
+    @Override
+    public int nextBallForSpare(){
         ball +=2;
         int a=ball;
         return itsThrows[a];
@@ -50,7 +55,8 @@ public class Score {
     * normal
     * une methode normal #9
     * */
-    private int twoBallsInFrame(){
+    @Override
+    public int twoBallsInFrame(){
         return itsThrows[ball]+itsThrows[ball+1];
     }
 }
