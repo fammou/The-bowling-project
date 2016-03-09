@@ -1,9 +1,9 @@
 /**
  * Created by sow25 on 02/03/16.
  */
-public class Game {
+public class Jeu {
 
-    public Game(){
+    public Jeu(){
         afficher();
     }
 
