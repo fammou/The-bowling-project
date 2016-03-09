@@ -43,6 +43,7 @@ public class Joueur {
     }
 
     public int scoreForFrame(int theFrame){
+        //return itsScorer.scoreForFrame(theFrame);
         return 0;
     }
 

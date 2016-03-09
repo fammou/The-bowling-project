@@ -7,6 +7,12 @@ public class Score {
     private int ball;//le numero du lance
     private int itsCurrentThrow =  0;//le numero du lance en current
 
+
+    public int scoreForFrame(int theFrame){
+        return 0;
+    }
+
+
     /**
      * rajouter les scores dans la tableau
      * itsThrows[le numero du lance]=score
