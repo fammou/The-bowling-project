@@ -23,6 +23,7 @@ public class Score {
     private boolean strike(){
         return itsThrows[ball] == 10;
     }
+
     /*
     * deux lances apres strike #8
     * */
