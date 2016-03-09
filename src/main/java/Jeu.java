@@ -3,11 +3,7 @@
  */
 public class Jeu {
 
-    public Jeu(){
-        afficher();
-    }
+    public static void main(String[] args) {
 
-    public void afficher(){
-        System.out.println("test comit first times");
     }
 }
