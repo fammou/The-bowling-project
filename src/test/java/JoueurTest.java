@@ -16,6 +16,7 @@ public class JoueurTest {
     @org.junit.Test
     public void testScore() throws Exception {
         System.out.println(joueur.score());
+        assertEquals(0, joueur.score());
     }
 
     @org.junit.Test
