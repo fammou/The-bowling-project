@@ -34,16 +34,15 @@ public class Joueur {
 
 
     private boolean stricke(int pins){
-
-        return true;
+        return (firstThrowInFrame && pins == 10);
     }
 
 
     private void advanceFrame(){
+        itsCurrentFrame = Math.min(10, itsCurrentFrame + 1);
     }
 
     public int scoreForFrame(int theFrame){
-
         return 0;
     }
 
