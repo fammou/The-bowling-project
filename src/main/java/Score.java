@@ -4,5 +4,5 @@
  */
 
 public class Score {
-
+    private int[] itsThrows = new int[31];//tableau des Scores
 }
