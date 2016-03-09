@@ -5,17 +5,19 @@ public class Joueur {
 
     private int itsCurrentFrame = 0;//le numero de frame
     private boolean firstThrowInFrame = true;//le jou premier fois sur une frame
-    private Scorer itsScorer = new Scorer();//le compteur score
+    private Score itsScorer = new Score();//le compteur de score
 
     public Joueur(){
     }
 
 
     public int score(){
-        return 0;
+        return scoreForFrame(itsCurrentFrame);
     }
 
     public void add(int pins){
+        itsScorer.addThrow(pins);
+        adjustCurrentFrame(pins);
     }
 
 
@@ -23,11 +25,13 @@ public class Joueur {
     }
 
     private boolean lastBallInFrame(int pins){
+
         return true;
     }
 
 
     private boolean stricke(int pins){
+
         return true;
     }
 
@@ -36,6 +40,7 @@ public class Joueur {
     }
 
     public int scoreForFrame(int theFrame){
+
         return 0;
     }
 
