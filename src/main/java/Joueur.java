@@ -22,11 +22,14 @@ public class Joueur {
 
 
     private void adjustCurrentFrame(int pins){
+        if (lastBallInFrame(pins))
+            advanceFrame();
+        else
+            firstThrowInFrame = false;
     }
 
     private boolean lastBallInFrame(int pins){
-
-        return true;
+        return stricke(pins)||!firstThrowInFrame;
     }
 
 
