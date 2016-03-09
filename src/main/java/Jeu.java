@@ -25,5 +25,10 @@ public class Jeu {
             System.out.println(g2.score());
         }
 
+        for (int j = 1; j < 11; j++) {
+            System.out.println("Joueur1: ==> score au lancé "+j+" est: "+g.scoreForFrame(j));
+            System.out.println("Joueur2: ==> score au lancé "+j+" est: "+g2.scoreForFrame(j));
+        }
+
     }
 }
