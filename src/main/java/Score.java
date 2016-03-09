@@ -50,6 +50,7 @@ public class Score {
     * normal
     * une methode normal #9
     * */
+
     private int twoBallsInFrame(){
         return itsThrows[ball]+itsThrows[ball+1];
     }
