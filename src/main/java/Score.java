@@ -12,7 +12,10 @@ public class Score implements IScore{
         return 0;
     }
 
-
+    @Override
+    public int getCurrentThrow(){
+        return this.itsCurrentThrow;
+    }
     /**
      * rajouter les scores dans la tableau
      * itsThrows[le numero du lance]=score
