@@ -9,7 +9,21 @@ public class Score implements IScore{
 
 
     public int scoreForFrame(int theFrame){
-        return 0;
+        ball = 0;
+        int score = 0;
+        for (int currentFrame = 1; currentFrame <= theFrame; currentFrame++) {
+            if (strike()) {//strike
+                score += 10 + nextTwoBallsForStrike();
+                ball++;
+            } else if(spare()){//spare
+                score += 10 + nextBallForSpare();
+                ball++;
+            }else {//normal
+                score += twoBallsInFrame();
+                ball+=2;
+            }
+        }
+        return score;
     }
 
     @Override

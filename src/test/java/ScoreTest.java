@@ -1,43 +1,51 @@
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+
 import static org.junit.Assert.*;
 
 /**
- * Created by QYL on 2016/3/9.
+ * Created by QYL on 2016/3/13.
  */
 public class ScoreTest {
-    IScore score;
-    @org.junit.Before
+    Score score;
+    @Before
     public void setUp() throws Exception {
-        score=new Score();
+        score = new Score();
     }
 
-    @org.junit.Test
-    public void testAddThrow() throws Exception {
-
-        assertEquals(1,);
+    @Test
+    public void testScoreForFrame() throws Exception {
+        assertEquals(0,score.scoreForFrame(0));
     }
 
-    @org.junit.Test
+    @Test
+    public void testGetCurrentThrow() throws Exception {
+        assertEquals(0,score.getCurrentThrow());
+    }
+
+    @Test
     public void testStrike() throws Exception {
-
+        assertEquals(false,score.strike());
     }
 
-    @org.junit.Test
+    @Test
     public void testNextTwoBallsForStrike() throws Exception {
-
+        assertEquals(0,score.nextTwoBallsForStrike());
     }
 
-    @org.junit.Test
+    @Test
     public void testSpare() throws Exception {
-
+        assertEquals(false,score.spare());
     }
 
-    @org.junit.Test
+    @Test
     public void testNextBallForSpare() throws Exception {
-
+        assertEquals(0,score.nextBallForSpare());
     }
 
-    @org.junit.Test
+    @Test
     public void testTwoBallsInFrame() throws Exception {
-
+        assertEquals(0,score.twoBallsInFrame());
     }
 }
