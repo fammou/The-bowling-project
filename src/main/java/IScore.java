@@ -2,10 +2,15 @@
  * Created by QYL on 2016/3/9.
  */
 public interface IScore {
+
+    /**
+     *
+     * @return val
+     */
     public int getCurrentThrow();
 
     /**
-     * rajouter les scores dans la tableau
+     * rajouter les scores dans la tableau.
      * itsThrows[le numero du lance]=score
      *
      * @param pins:score
