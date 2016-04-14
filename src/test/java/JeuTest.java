@@ -18,6 +18,6 @@ public class JeuTest {
 
     @Test
     public void testMain(){
-        assertEquals(jeu.main(null), 0);
+        jeu.main(null);
     }
 }

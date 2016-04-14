@@ -4,11 +4,17 @@
 public class Jeu {
 
     /**
+     * constructeur.
+     */
+    protected Jeu() {
+
+    }
+
+    /**
      * Main: Exécute le projet.
      * @param args argument
-     * @return int vrai
      */
-     public final int main(final String[] args) {
+      static final void main(final String[] args) {
 
         final int taille = 11;
         final int un = 1;
@@ -46,7 +52,5 @@ public class Jeu {
             System.out.println("Joueur2: ==> score au lancé " + j + " est: "
                     + g2.scoreForFrame(j));
         }
-
-        return 0;
     }
 }
