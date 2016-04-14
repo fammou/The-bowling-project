@@ -26,6 +26,13 @@ public class Score implements IScore {
 
     /**
      *
+     * @return int length
+     */
+    public final int getitsThrows() {
+        return this.itsThrows.length;
+    }
+    /**
+     *
      * @param theFrame argument
      * @return int sdflkjdaslkf
      */

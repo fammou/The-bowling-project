@@ -49,4 +49,9 @@ public class ScoreTest {
     public void testTwoBallsInFrame() throws Exception {
         assertEquals(0, score.twoBallsInFrame());
     }
+
+    @Test
+    public void testGetitsThrows() throws Exception {
+        assertEquals(31,score.getitsThrows());
+    }
 }
