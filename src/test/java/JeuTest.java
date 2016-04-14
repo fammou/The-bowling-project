@@ -17,7 +17,7 @@ public class JeuTest {
     }
 
     @Test
-    public void testJeu(){
-        assertEquals(jeu.executeMain(), 0);
+    public void testMain(){
+        assertEquals(jeu.main(null), 0);
     }
 }

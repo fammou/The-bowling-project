@@ -8,7 +8,7 @@ public class Jeu {
      * @param args argument
      * @return int vrai
      */
-     private static int main(final String[] args) {
+     public final int main(final String[] args) {
 
         final int taille = 11;
         final int un = 1;
@@ -48,13 +48,5 @@ public class Jeu {
         }
 
         return 0;
-    }
-
-    /**
-     *
-     * @return int val
-     */
-    public final int executeMain() {
-       return main(null);
     }
 }
