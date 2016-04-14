@@ -16,13 +16,11 @@ public class Jeu {
 
         for (int i = 0; i < scores.length; i++) {
             g.add(scores[i]);
-            System.out.println(g.score());
         }
 
 
         for (int i = 0; i < scores2.length; i++) {
             g2.add(scores2[i]);
-            System.out.println(g2.score());
         }
 
         for (int j = 1; j < 11; j++) {

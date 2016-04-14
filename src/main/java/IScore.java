@@ -37,4 +37,5 @@ public interface IScore {
      * @return le retor
      */
     int twoBallsInFrame();
+
 }
