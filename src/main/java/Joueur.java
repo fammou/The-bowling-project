@@ -41,7 +41,7 @@ public class Joueur {
      *
      * @param pins param
      */
-    private void adjustCurrentFrame(final int pins) {
+    public final void adjustCurrentFrame(final int pins) {
         if (lastBallInFrame(pins)) {
             advanceFrame();
         } else {
@@ -54,7 +54,7 @@ public class Joueur {
      * @param pins param
      * @return boolean dkk
      */
-    private boolean lastBallInFrame(final int pins) {
+    public final boolean lastBallInFrame(final int pins) {
         return stricke(pins) || !firstThrowInFrame;
     }
 
@@ -63,14 +63,14 @@ public class Joueur {
      * @param pins param
      * @return boolean dml
      */
-    private boolean stricke(final int pins) {
+    public final boolean stricke(final int pins) {
         return (firstThrowInFrame && pins == DIX);
     }
 
     /**
      *msqkjf.
      */
-    private void advanceFrame() {
+    public final void advanceFrame() {
         itsCurrentFrame = Math.min(DIX, itsCurrentFrame + 1);
     }
 

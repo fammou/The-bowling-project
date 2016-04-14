@@ -6,8 +6,9 @@ public class Jeu {
     /**
      * Main: Exécute le projet.
      * @param args argument
+     * @return int vrai
      */
-    private static void main(final String[] args) {
+     public final int main(final String[] args) {
 
         final int taille = 11;
         final int un = 1;
@@ -46,5 +47,6 @@ public class Jeu {
                     + g2.scoreForFrame(j));
         }
 
+        return 0;
     }
 }
