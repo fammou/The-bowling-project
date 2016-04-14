@@ -2,71 +2,84 @@
  * Created by sow25 on 09/03/16.
  */
 public class Joueur {
+    /**
+     * sdlkmfjq.
+     */
+    static final int DIX = 10;
 
-    private int itsCurrentFrame = 0;//le numero de frame
-    private boolean firstThrowInFrame = true;//le jou premier fois sur une frame
-    private Score itsScorer = new Score();//le compteur de score
+    /**
+     * le numero de frame.
+     */
+    private int itsCurrentFrame = 0;
+    /**
+     * le jou premier fois sur une frame.
+     */
+    private boolean firstThrowInFrame = true;
+    /**
+     * le compteur de score.
+     */
+    private Score itsScorer = new Score();
 
     /**
      *
-     * @return le score
+     * @return score le score
      */
-    public int score() {
-
+    public final int score() {
         return scoreForFrame(itsCurrentFrame);
     }
 
     /**
      *
-     * @param pins
+     * @param pins param
      */
-    public void add(int pins) {
+    public final void add(final int pins) {
         itsScorer.addThrow(pins);
         adjustCurrentFrame(pins);
     }
 
     /**
      *
-     * @param pins
+     * @param pins param
      */
-    private void adjustCurrentFrame(int pins) {
-        if (lastBallInFrame(pins))
+    private void adjustCurrentFrame(final int pins) {
+        if (lastBallInFrame(pins)) {
             advanceFrame();
-        else
+        } else {
             firstThrowInFrame = false;
+        }
     }
 
     /**
      *
-     * @param pins
-     * @return
+     * @param pins param
+     * @return boolean dkk
      */
-    private boolean lastBallInFrame(int pins) {
+    private boolean lastBallInFrame(final int pins) {
         return stricke(pins) || !firstThrowInFrame;
     }
 
     /**
      *
-     * @param pins
-     * @return
+     * @param pins param
+     * @return boolean dml
      */
-    private boolean stricke(int pins) {
-        return (firstThrowInFrame && pins == 10);
+    private boolean stricke(final int pins) {
+        return (firstThrowInFrame && pins == DIX);
     }
 
     /**
-     *
+     *msqkjf.
      */
     private void advanceFrame() {
-        itsCurrentFrame = Math.min(10, itsCurrentFrame + 1);
+        itsCurrentFrame = Math.min(DIX, itsCurrentFrame + 1);
     }
 
     /**
      *
-     * @param theFrame
-     * @return
+     * @param theFrame param
+     * @return int dkjk
      */
-    public int scoreForFrame(int theFrame) {
+    public final int scoreForFrame(final int theFrame) {
         return itsScorer.scoreForFrame(theFrame);
     }
 
