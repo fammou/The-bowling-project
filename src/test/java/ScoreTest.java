@@ -9,6 +9,7 @@ import static org.junit.Assert.*;
  */
 public class ScoreTest {
     Score score;
+
     @Before
     public void setUp() throws Exception {
         score = new Score();
@@ -16,36 +17,36 @@ public class ScoreTest {
 
     @Test
     public void testScoreForFrame() throws Exception {
-        assertEquals(0,score.scoreForFrame(0));
+        assertEquals(0, score.scoreForFrame(0));
     }
 
     @Test
     public void testGetCurrentThrow() throws Exception {
-        assertEquals(0,score.getCurrentThrow());
+        assertEquals(0, score.getCurrentThrow());
     }
 
     @Test
     public void testStrike() throws Exception {
-        assertEquals(false,score.strike());
+        assertEquals(false, score.strike());
     }
 
     @Test
     public void testNextTwoBallsForStrike() throws Exception {
-        assertEquals(0,score.nextTwoBallsForStrike());
+        assertEquals(0, score.nextTwoBallsForStrike());
     }
 
     @Test
     public void testSpare() throws Exception {
-        assertEquals(false,score.spare());
+        assertEquals(false, score.spare());
     }
 
     @Test
     public void testNextBallForSpare() throws Exception {
-        assertEquals(0,score.nextBallForSpare());
+        assertEquals(0, score.nextBallForSpare());
     }
 
     @Test
     public void testTwoBallsInFrame() throws Exception {
-        assertEquals(0,score.twoBallsInFrame());
+        assertEquals(0, score.twoBallsInFrame());
     }
 }
